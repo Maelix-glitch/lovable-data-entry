@@ -205,6 +205,14 @@ export function MetricsEntryModal({
             <p className="mt-3 text-center text-xs text-muted-foreground">
               {submitted && !allFilled ? "All fields are required." : "Real data only. No estimates, no blanks."}
             </p>
+            {!isEmpty && (
+              <button
+                onClick={() => setView("reset")}
+                className="mt-2 w-full text-center text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-destructive hover:underline"
+              >
+                Clear all fields
+              </button>
+            )}
           </div>
         )}
 
