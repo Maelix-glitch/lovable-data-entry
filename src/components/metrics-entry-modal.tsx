@@ -132,7 +132,7 @@ export function MetricsEntryModal({
       aria-label="Today's snapshot"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="w-full max-w-md overflow-hidden rounded-2xl border border-border shadow-2xl" style={{ backgroundColor: "var(--surface)" }}>
+      <div className="dark w-full max-w-md overflow-hidden rounded-2xl border border-border shadow-2xl" style={{ backgroundColor: "var(--surface)" }}>
         {/* Header */}
         <div
           className="relative px-6 pb-5 pt-4"
