@@ -19,6 +19,17 @@
  */
 
 @theme inline {
+  --color-metric-sleep: var(--metric-sleep);
+  --color-metric-water: var(--metric-water);
+  --color-metric-study: var(--metric-study);
+  --color-metric-movement: var(--metric-movement);
+  --color-metric-energy: var(--metric-energy);
+  --color-metric-screen: var(--metric-screen);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-brand: var(--brand);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
