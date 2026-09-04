@@ -110,7 +110,6 @@ export function MetricsEntryModal({
 
   const hasErrors = Object.values(errors).some(Boolean);
   const allFilled = METRICS.every((m) => (values[m.key] ?? "").trim() !== "");
-  const canConfirm = !isEmpty && (!submitted || (!hasErrors && allFilled));
 
   const subtitle =
     view === "saved"
