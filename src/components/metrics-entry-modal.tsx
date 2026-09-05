@@ -126,18 +126,19 @@ export function MetricsEntryModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 p-0 backdrop-blur-sm sm:items-center sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-label="Today's snapshot"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="dark w-full max-w-md overflow-hidden rounded-2xl border border-border shadow-2xl" style={{ backgroundColor: "var(--surface)" }}>
+      <div className="dark max-h-[92dvh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-border shadow-2xl sm:rounded-2xl" style={{ backgroundColor: "var(--surface)", boxShadow: "0 0 80px -20px color-mix(in oklch, var(--brand) 50%, transparent)" }}>
         {/* Header */}
         <div
           className="relative px-6 pb-5 pt-4"
           style={{ background: "linear-gradient(100deg, var(--metric-screen) 0%, var(--brand) 55%, var(--metric-sleep) 100%)" }}
         >
+          <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-white/40 sm:hidden" />
           <h2 className="text-lg font-bold text-white">Today's snapshot</h2>
           {subtitle && <p className="mt-0.5 text-sm text-white/80">{subtitle}</p>}
           <button
@@ -151,7 +152,7 @@ export function MetricsEntryModal({
 
         {view === "form" && (
           <div className="px-5 pb-6 pt-5">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {METRICS.map((m, i) => {
                 const raw = values[m.key] ?? "";
                 const err = errors[m.key];
